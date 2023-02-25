@@ -1,0 +1,89 @@
+<link rel="stylesheet" type="text/css" href="../styles/master.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<%- include('navbar.ejs') %>
+
+<body>
+<form action="/update/<%= machine._id %>" method="post">
+    <input type="hidden" name="_id" value="<%= machine._id %>">
+      <label for="hall">Hall:</label>
+      <select name="hall" id="hall"  required>
+        <option value="<%= machine.hall%>">Default:<%= machine.hall%></option>
+          <option value="E">E</option>
+          <option value="TBM">TBM</option>
+          <option value="F">F</option>
+          <option value="CDG1">CDG1</option>
+          <option value="S3N">S3N</option>
+          <option value="T2G">T2G</option>
+          <option value="TBS4">TBS4</option>
+      </select>
+      <br>
+
+      <label for="machineId">Machine ID:</label>
+      <input type="text" id="machineId" name="machineId" value="<%= machine.machineId%>" required>
+      <br>
+
+      <label for="machineSN">Machine SN:</label>
+      <input type="text" id="machineSN" name="machineSN" value="<%= machine.machineSN%>" required>
+      <br>
+
+      <label for="equipmentCode">Equipment Code:</label>
+      <input type="text" id="equipmentCode" name="equipmentCode" value="<%= machine.equipmentCode%>" required>
+      <br>
+
+      <br>
+      <label for="phaseMV3D">Phase MV3D:</label>
+      <select name="phaseMV3D" id="phaseMV3D" value="<%= machine.phaseMV3D%>" required>
+        <option value="<%= machine.phaseMV3D%>">Default:<%= machine.phaseMV3D%></option>
+        <option value="D1 Phase 1">D1 Phase 1</option>
+        <option value="D1 Phase 2">D1 Phase 2</option>
+        <option value="D1 Phase 3.1">D1 Phase 3.1</option>
+        <option value="D2 Phase 1">D2 Phase 1</option>
+        <option value="D2 Phase 2">D2 Phase 2</option>
+        <option value="D2 Phase 3.1">D2 Phase 3.1</option>
+      </select>
+      <!--<input type="text" id="phaseMV3D" name="phaseMV3D" value="<%= machine.phaseMV3D%>" required>-->
+      <br>
+
+      <br>
+      <label for="versionRacks">Version Racks:</label>
+      <input type="text" id="versionRacks" name="versionRacks" value="<%= machine.versionRacks%>" required>
+      <br>
+
+      <label for="versionAlgo">Version Algo:</label>
+      <input type="text" id="versionAlgo" name="versionAlgo" value="<%= machine.versionAlgo%>" required>
+      <br>
+
+      <label for="sensiAlgo">Sensi Algo:</label>
+      <input type="text" id="sensiAlgo" name="sensiAlgo" value="<%= machine.sensiAlgo%>" required>
+      <br>
+
+      <br>
+      <label>Révision HVPS</label>
+      <br>
+      <label for="revHVPS1">1:</label>
+      <input type="text" id="revHVPS1" name="revHVPS1" value="<%= machine.revHVPS1%>" required>
+      <label for="revHVPS2">2:</label>
+      <input type="text" id="revHVPS2" name="revHVPS2" value="<%= machine.revHVPS2%>" required>
+      <label for="revHVPS3">3:</label>
+      <input type="text" id="revHVPS3" name="revHVPS3" value="<%= machine.revHVPS3%>" required>
+      <br>
+
+      <br>
+      <label for="ramIAC">Ram IAC:</label>
+      <select name="ramIAC" id="ramIAC" value="<%= machine.ramIAC%>" required>
+          <option value="<%= machine.ramIAC%>">Default:<%= machine.ramIAC%></option>
+          <option value="64">64</option>
+          <option value="96">96</option>
+          <option value="128">128</option>
+          <option value="256">256</option>
+      </select>
+      <br>
+
+      <label for="ttl">TTL:</label>
+      <input type="text" id="ttl" name="ttl" value="<%= machine.ttl%>" required>
+      <br>
+    <!-- Repeat for all fields -->
+    <button type="submit">Update</button>
+</form>
+</body>
