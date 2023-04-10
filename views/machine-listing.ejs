@@ -4,7 +4,8 @@
 <%- include('navbar.ejs') %>
 
 <body>
-<table>
+  <input type="text" id="search-bar" placeholder="Search...">
+  <table id="machine-listing">
     <thead>
       <tr>
         <th>Hall</th>
@@ -45,10 +46,36 @@
         </tr>
         <% });}else{ %>
           <tr>
-              <td colspan="6">No Record Found</td>
-              
-            </tr>
+            <td colspan="6">No Record Found</td>
+          </tr>
         <% } %>
     </tbody>
 </table>
 </body>
+
+<script>
+  // SEARCHBAR
+  // Get references to the search bar and machine listing table
+  const searchBar = document.getElementById('search-bar');
+  const machineListingTable = document.getElementById('machine-listing');
+
+  // Add an event listener to the search bar that listens for changes to the input value
+  searchBar.addEventListener('input', function() {
+    // Get the search query entered by the user
+    const searchQuery = searchBar.value.toLowerCase();
+
+    // Loop through each row in the machine listing table
+    const rows = machineListingTable.getElementsByTagName('tr');
+    for (let i = 0; i < rows.length; i++) {
+      const row = rows[i];
+
+      // If the row contains the search query, show it; otherwise, hide it
+      const rowData = row.textContent || row.innerText;
+      if (rowData.toLowerCase().indexOf(searchQuery) !== -1) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    }
+  });
+</script>
