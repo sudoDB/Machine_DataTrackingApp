@@ -4,7 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/MV3D_db', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/machine_db', { useNewUrlParser: true });
 
 const db = mongoose.connection;
 
@@ -19,7 +19,7 @@ const machineListingSchema = new mongoose.Schema({
   machineSN: String,
   equipmentCode: String,
   //
-  phaseMV3D: String,
+  phaseMachine: String,
   versionRacks: String,
   versionAlgo: String,
   sensiAlgo: String,
@@ -66,11 +66,11 @@ app.get('/add', (req, res) => {
 });
 app.post('/add-machine', (req, res) => {
   const machine = new MachineListing({
-    hall: req.body.hall,
+    anonValue0: req.body.hall,
     machineId: req.body.machineId,
     machineSN: req.body.machineSN,
     equipmentCode: req.body.equipmentCode,
-    phaseMV3D: req.body.phaseMV3D,
+    phaseMachine: req.body.phaseMV3D,
     versionRacks: req.body.versionRacks,
     versionAlgo: req.body.versionAlgo,
     sensiAlgo: req.body.sensiAlgo,

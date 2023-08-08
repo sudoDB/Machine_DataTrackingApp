@@ -9,13 +9,13 @@
       <label for="hall">Hall:</label>
       <select name="hall" id="hall"  required>
         <option value="<%= machine.hall%>">Default:<%= machine.hall%></option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
           <option value="E">E</option>
-          <option value="TBM">TBM</option>
           <option value="F">F</option>
-          <option value="CDG1">CDG1</option>
-          <option value="S3N">S3N</option>
-          <option value="T2G">T2G</option>
-          <option value="TBS4">TBS4</option>
+          <option value="G">G</option>
       </select>
       <br>
 
@@ -32,17 +32,17 @@
       <br>
 
       <br>
-      <label for="phaseMV3D">Phase MV3D:</label>
-      <select name="phaseMV3D" id="phaseMV3D" value="<%= machine.phaseMV3D%>" required>
-        <option value="<%= machine.phaseMV3D%>">Default:<%= machine.phaseMV3D%></option>
-        <option value="D1 Phase 1">D1 Phase 1</option>
-        <option value="D1 Phase 2">D1 Phase 2</option>
-        <option value="D1 Phase 3.1">D1 Phase 3.1</option>
-        <option value="D2 Phase 1">D2 Phase 1</option>
-        <option value="D2 Phase 2">D2 Phase 2</option>
-        <option value="D2 Phase 3.1">D2 Phase 3.1</option>
+      <label for="phaseMachine">Phase MV3D:</label>
+      <select name="phaseMachine" id="phaseMachine" value="<%= machine.phaseMachine%>" required>
+        <option value="<%= machine.phaseMachine%>">Default:<%= machine.phaseMachine%></option>
+        <option value="V1 Phase 1">V1 Phase 1</option>
+        <option value="V1 Phase 2">V1 Phase 2</option>
+        <option value="V1 Phase 3.1">V1 Phase 3.1</option>
+        <option value="V2 Phase 1">V2 Phase 1</option>
+        <option value="V2 Phase 2">V2 Phase 2</option>
+        <option value="V2 Phase 3.1">V2 Phase 3.1</option>
       </select>
-      <!--<input type="text" id="phaseMV3D" name="phaseMV3D" value="<%= machine.phaseMV3D%>" required>-->
+      <!--<input type="text" id="phaseMachine" name="phaseMachine" value="<%= machine.phaseMachine%>" required>-->
       <br>
 
       <br>

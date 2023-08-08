@@ -1,3 +1,0 @@
-Ajouter des options
-    Presence crontab
-    Presence des scripts (sedbad, etc)
