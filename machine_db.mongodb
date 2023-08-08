@@ -2,7 +2,7 @@
 // Use Ctrl+Space inside a snippet or a string literal to trigger completions.
 
 // The current database to use.
-use('MV3D_db');
+use('MACHINE_db');
 
 // Create a new index in the collection.
 db.getCollection('mv3d_dbs')

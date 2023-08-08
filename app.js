@@ -4,7 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/machine_db', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/MACHINE_db', { useNewUrlParser: true });
 
 const db = mongoose.connection;
 
